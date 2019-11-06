@@ -15,7 +15,10 @@ void compactador(v){
 			for(int j = 0; j<= len(v); j = j + 1)
 			var.let = v[c];
 			if (v[j] == var.let){
-				var.qtd = var.qtd + 1
+				var.qtd = var.qtd + 1;
+			}
+			else{
+				break;
 			}
 		}
 	}
