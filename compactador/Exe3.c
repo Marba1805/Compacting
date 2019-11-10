@@ -77,6 +77,7 @@ void compactador(v){
 		lt[c]=var;
 		}		
 	}
+	return lt;
 }
 
 void main(){
