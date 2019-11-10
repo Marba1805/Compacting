@@ -17,20 +17,23 @@ int contPadr(v){
 //Conta quantos padroes tem no vetor de input
 	char aux[(len(v)/2)];
 	int cont = 0;
+	int count = 0;
 	int c,j,k;
 		for(c = 0; c<= len(v); c = c + 1){
 			for(j = c+1; j<= len(v); j = j + 1)
 			aux[a] = v[c];
 			if (v[j] == aux[a]){
 				for(k =0; k  <= c+1; k=k+1){
-					if (){ // esse loop tem como objetivo verificar 
-					       //o resto do vetor auxiliar para conferir o padrao
-					}	
+					if (aux[k] == v[k]){ // esse loop tem como objetivo verificar 
+					 cont = cont+1 //o trecho do vetor ao vetor auxiliar para conferir o padrao
+					}
+					if (cont !== k){
+						count = count +1;
+						break;
+					}
 				}
 			}
-			else{	
-				cont = cont +1;
-			}
+
 		}
 	return cont;
 }
@@ -44,7 +47,7 @@ void compactador(v){
 	struct comLet var; //cria uma variavel com a estrutura criada anteriormente
 	struct comLet lt[padr] /*cria um vetor de tamanho exatamente nescecario ao caso*/
 	char aux[(len(v)/2)]; //cira um vetor de auxilio de tamanho maximo de metade do vetor inicial
-	int c,j,k,count;
+	int c,j,k,l,cont;
 	
 	
 	
@@ -52,21 +55,26 @@ void compactador(v){
 		for(c = 0; c<= len(v); c = c + 1){
 			for(j = c+1; j<= len(v); j = j + 1)
 				if (v[c] !== v[j]){
-					aux[c] = c[c];
+					aux[c] = v[c];
 				}
 
 				else{
 				
 				break;
 				}
-			for(k =0; k  <= c+1; k=k+1){   // esse loop tem como objetivo verificar
-				if (v[c] == aux[k]){   //o resto do vetor auxiliar para conferir o padrao
-					count = count +1;
+				for(k =j; k  <= c+1; k=k+1){
+					if (aux[k] == v[k]){ // esse loop tem como objetivo verificar 
+					 cont = cont+1 //o trecho do vetor ao vetor auxiliar para conferir o padrao
+					}
+					if (cont !== k){
+						var.qtd = var.qtd + 1;	
+						break;
+					}
+					for(l = j; l<=k;l=l+1){
+						var.let = "" + v[l];
+					}
 				}
-			}
-			if(){
-				var.qtd = var.qtd + 1;	
-			}
+		lt[c]=var;
 		}		
 	}
 }
