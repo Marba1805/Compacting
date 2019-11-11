@@ -40,7 +40,7 @@ int contPadr(v){
 
 
 
-void compactador(v){
+void *compactador(v){
 	
 	int i = 0; // cria uma condicao para um "loop while" rodar mais para fente
 	int padr = contPadr(v); //cria uma variavel com o numero de padroes no vetor
