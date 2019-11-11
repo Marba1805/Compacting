@@ -28,7 +28,7 @@ int contPadr(v){
 
 
 
-void compactador(v){
+void * compactador(v){
 	
 	bool i = false; // cria uma condicao para um "loop while" rodar mais para fente
 	struct comLet var; //cria uma variavel com a estrutura criada anteriormente
@@ -40,8 +40,7 @@ void compactador(v){
 			if (v[j] == var.let){
 				var.qtd = var.qtd + 1;
 			}
-			else{
-				
+			else{	
 				break;
 			}
 			lt[c] = var;
