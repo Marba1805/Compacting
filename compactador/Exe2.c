@@ -1,3 +1,9 @@
+/*
+Feito por Abram Grossmann TIA 31826131
+          Thais Yuri Saito TIA 31847285
+*/
+
+
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
